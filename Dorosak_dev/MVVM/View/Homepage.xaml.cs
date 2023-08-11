@@ -10,24 +10,18 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace Dorosak_dev.MVVM.View
 {
     /// <summary>
-    /// Interaction logic for Homepage.xaml
+    /// Interaction logic for Homepage2.xaml
     /// </summary>
-    public partial class Homepage : Page
+    public partial class Homepage : Window
     {
         public Homepage()
         {
             InitializeComponent();
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }
