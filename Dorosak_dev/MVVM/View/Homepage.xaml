@@ -5,8 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Dorosak_dev"
         mc:Ignorable="d"
-        Title="Homepage2" Height="450" Width="800">
-    <Grid>
+        Title="Homepage" Height="450" Width="800">
+
+    <ContentControl>
         <Grid Margin="0,0,0,0">
             <Grid.ColumnDefinitions >
                 <ColumnDefinition Width="5*"/>
@@ -25,14 +26,17 @@
             </StackPanel>
 
             <StackPanel Grid.Column="1" Grid.Row="2">
-                <Button Content="Start Class" Background="#FF1F7A4A" Foreground="White" HorizontalAlignment="Center" Height="40" Width="160">
-                    <Button.Resources>
-                        <Style TargetType="Border">
-                            <Setter Property="CornerRadius" Value="15"/>
-                        </Style>
-                    </Button.Resources>
-                </Button>
+                <Button Content="Start Class" 
+                        FontSize="20"
+                        Style="{StaticResource ButtonTheme}"
+                        Margin="0,15,0,0"/>
+
+                <Button Content="Add Homework"
+                        FontSize="20"
+                        Style="{StaticResource ButtonTheme}"
+                        Margin="0,25,0,0"/>
             </StackPanel>
         </Grid>
-    </Grid>
+    </ContentControl>
+
 </Window>

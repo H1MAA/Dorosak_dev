@@ -15,18 +15,13 @@ using System.Windows.Shapes;
 namespace Dorosak_dev.MVVM.View
 {
     /// <summary>
-    /// Interaction logic for Homepage2.xaml
+    /// Interaction logic for ClassList.xaml
     /// </summary>
-    public partial class Homepage : Window
+    public partial class ClassList : Window
     {
-        public Homepage()
+        public ClassList()
         {
             InitializeComponent();
-        }
-
-        private void RadioButton_Checked(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }
