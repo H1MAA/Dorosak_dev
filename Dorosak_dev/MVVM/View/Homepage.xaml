@@ -5,27 +5,55 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Dorosak_dev"
         mc:Ignorable="d"
-        Title="Homepage" Height="450" Width="800">
+        Title="Homepage" Height="450" Width="800"
+        WindowStyle="None"
+        ResizeMode="CanResizeWithGrip"
+        AllowsTransparency="True">
 
     <ContentControl>
         <Grid Margin="0,0,0,0">
             <Grid.ColumnDefinitions >
-                <ColumnDefinition Width="5*"/>
-                <ColumnDefinition Width="5*"/>
-                <ColumnDefinition Width="5*"/>
+                <ColumnDefinition Width="89*"/>
+                <ColumnDefinition Width="89*"/>
+                <ColumnDefinition Width="74*"/>
+                <ColumnDefinition Width="15*"/>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
-                <RowDefinition Height="1*"/>
-                <RowDefinition Height="7*"/>
-                <RowDefinition Height="7*"/>
-                <RowDefinition Height="7*"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="8*"/>
+                <RowDefinition Height="8*"/>
+                <RowDefinition Height="8*"/>
             </Grid.RowDefinitions>
-            <Border Grid.Column ="0" Grid.ColumnSpan="3" Background="#FF1F7A4A"/>
+            <Border Grid.Column ="0" Grid.ColumnSpan="4" Background="#FF1F7A4A"
+                    MouseDown="Border_MouseDown"
+                    Padding="3">
+
+
+                <StackPanel Orientation="Horizontal"
+                            HorizontalAlignment="Right"
+                            Margin="0,0,3,0">
+
+                    <Button Content="🗕"
+                            Style="{StaticResource WindowButtonTheme}"
+                            Click="MinButton_Click" Width="20"
+                            Margin="0,0,8,3"/>
+
+                    <Button Content="❏"
+                            Margin="0,0,8,0"
+                            Style="{StaticResource WindowButtonTheme}"
+                            Click="MaxButton_Click"/>
+
+                    <Button Content="🞫"
+                            Style="{StaticResource WindowButtonTheme}"
+                            Click="ExitButton_Click"/>
+
+                </StackPanel>
+            </Border>
             <StackPanel Grid.Column="1" Grid.Row="1" VerticalAlignment="Center">
                 <TextBlock Foreground="#FF1F7A4A" FontSize="50" Text="Welcome" HorizontalAlignment="Center"/>
             </StackPanel>
 
-            <StackPanel Grid.Column="1" Grid.Row="2">
+            <StackPanel Grid.Column="1" Grid.Row="2" Margin="0,0,0,143" Grid.RowSpan="2">
                 <Button Content="Start Class" 
                         FontSize="20"
                         Style="{StaticResource ButtonTheme}"
